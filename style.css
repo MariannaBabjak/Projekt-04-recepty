@@ -1,0 +1,261 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+/**MOBILE DEVICE**/
+@media (max-width: 540px) {
+
+    .recepty {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hlavni-recept {
+        background-image: url(images/salat.jpg);
+        background-repeat: no-repeat;
+        background-position: 20%;
+        background-size: cover;
+        height: 300px;
+        min-height: 200px;
+        padding: 10px 10px 0px 10px;
+    }
+
+    .maly-recept-1, .maly-recept-2, .maly-recept-3, .maly-recept-4 {
+        background-repeat: no-repeat;
+        background-position: 20%;
+        background-size: cover;
+        height: 150px;
+        min-height: 90px;
+        padding: 10px 10px 0px 10px;
+        border-top: 1px solid white;
+    }
+
+    .maly-recept-1 {
+        background-image: url(images/chlebicek.jpg);
+    }
+
+    .maly-recept-2 {
+        background-image: url(images/tacos.jpg);
+    }
+
+    .maly-recept-3 {
+        background-image: url(images/cizrna.jpg);
+    }
+
+    .maly-recept-4 {
+        background-image: url(images/burger.jpg);
+    }
+
+    .kategoria, .komentar {
+        font-family: 'Source Sans Pro';
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .hlavni-recept, .maly-recept-1, .maly-recept-2, .maly-recept-3, .maly-recept-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .popis {
+        display: flex;
+        justify-content: space-between;
+    }
+
+   h3 {
+    font-family: 'Raleway';
+    font-size: 28px;
+    font-weight: 800;
+   }
+
+   h4 {
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 800;
+   }
+}
+
+/**TABLET**/
+@media (min-width: 480px) {
+
+    .hlavni-recept {
+        background-image: url(images/salat.jpg);
+        background-repeat: no-repeat;
+        background-position: 20%;
+        background-size: cover;
+        height: 300px;
+        min-height: 250px;
+        padding: 20px 20px 0px 20px;
+    }
+
+    .maly-recept-1, .maly-recept-2, .maly-recept-3, .maly-recept-4 {
+        background-repeat: no-repeat;
+        background-position: 20%;
+        background-size: cover;
+        width: 50%;
+        height: 150px;
+        min-height: 150px;
+        padding: 20px 20px 0px 20px;
+    }
+
+    .maly-recept-1 {
+        background-image: url(images/chlebicek.jpg);
+        border-right: 1px solid white;
+    }
+
+    .maly-recept-2 {
+        background-image: url(images/tacos.jpg);
+    }
+
+    .maly-recept-3 {
+        background-image: url(images/cizrna.jpg);
+        border-right: 1px solid white;
+    }
+
+    .maly-recept-4 {
+        background-image: url(images/burger.jpg);
+    }
+
+    .kategoria, .komentar {
+        font-family: 'Source Sans Pro';
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .hlavni-recept, .maly-recept-1, .maly-recept-2, .maly-recept-3, .maly-recept-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .popis {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .male-recepty-A, .male-recepty-B {
+        display: flex;
+        border-top: 1px solid white;
+    }
+
+   h3, h4 {
+    font-family: 'Raleway';
+    font-size: 36px;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px #000000;
+   }
+
+   h4 {
+    font-size: 22px;
+   }
+}
+
+/**DESKTOP**/
+@media (min-width: 860px) {
+
+    .recepty {
+        display: flex;
+    }
+
+    .hlavni-recept {
+        background-image: url(images/salat.jpg);
+        background-repeat: no-repeat;
+        background-position: 20%;
+        background-size: cover;
+        height: 500px;
+        min-height: 400px;
+        width: 33.333%;
+        padding: 20px 20px 0px 20px;
+        border-right: 1px solid white;;
+    }
+
+    .maly-recept-1, .maly-recept-2, .maly-recept-3, .maly-recept-4 {
+        background-repeat: no-repeat;
+        background-position: 20%;
+        background-size: cover;
+        height: 250px;
+        min-height: 200px;
+        padding: 20px 20px 0px 20px;
+    }
+
+    .maly-recept-1 {
+        background-image: url(images/chlebicek.jpg);
+    }
+
+    .maly-recept-2 {
+        background-image: url(images/tacos.jpg);
+    }
+
+    .maly-recept-3 {
+        background-image: url(images/cizrna.jpg);
+    }
+
+    .maly-recept-4 {
+        background-image: url(images/burger.jpg);
+    }
+
+    .kategoria, .komentar {
+        font-family: 'Source Sans Pro';
+        font-size: 14px;
+        font-weight: 400;
+        text-shadow: 1px 1px 3px #000000;
+    }
+
+    .popis {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .male-recepty {
+        width: 66.666%;
+    }
+
+   h3, h4 {
+    font-family: 'Raleway';
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px #000000;
+   }
+
+   h4 {
+    font-size: 28px;
+   }
+}
